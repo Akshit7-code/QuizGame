@@ -143,35 +143,60 @@ button:hover {
         width: 100%;
         padding: 10px;
     }
+    #result-container { 
+        width: 300px;
+    }
 }
 
-
-/* winner  */
+/* Winner Section */
 .quiz-result {
-    text-align: center;     
+    text-align: center;
     padding: 20px;
     border-radius: 10px;
     background: #1e1e1e;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-    border: 1px solid #444; 
+    border: 1px solid #444;
     width: 460px;
-    max-width: 460px;
+    max-width: 90%; /* Makes it adapt on smaller screens */
     margin: auto;
     display: none;
 }
 
+/* Image */
 .quiz-result img {
     width: 200px;
     height: auto;
     filter: drop-shadow(0px 0px 10px rgba(255, 215, 0, 0.8)); /* Glowing effect */
 }
 
+/* Heading */
 .quiz-result h2 {
     color: #FFD700; /* Gold color for a winner look */
     margin-top: 10px;
 }
 
+/* Text */
 .quiz-result p {
     color: #ccc;
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .quiz-result {
+        padding: 15px;
+        width: 75%;
+        max-width: 100%;
+    }
+
+    .quiz-result img {
+        width: 150px; /* Slightly smaller image on small screens */
+    }
+
+    .quiz-result h2 {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    .quiz-result p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+}
